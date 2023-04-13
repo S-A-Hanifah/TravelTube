@@ -69,7 +69,7 @@ export default function useChannel(setOpenUser) {
         data
       );
 
-      const { url } = res.data;
+      const url = res.data.secure_url;
 
       return url;
     } catch (error) {

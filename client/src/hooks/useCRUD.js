@@ -60,7 +60,7 @@ export function useCRUD(setOpen) {
             },
           }
         );
-        imgUrl = res.data.url;
+        imgUrl = res.data.secure_url;
       } catch (err) {
         console.log(err);
       }
@@ -83,7 +83,7 @@ export function useCRUD(setOpen) {
             },
           }
         );
-        videoUrl = res.data.url;
+        videoUrl = res.data.secure_url;
       } catch (err) {
         console.log(err);
       }
