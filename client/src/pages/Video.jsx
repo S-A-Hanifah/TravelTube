@@ -249,7 +249,7 @@ export default function Video() {
             <Hr />
             <Comments videoId={currentVideo._id} />
           </Content>
-          <Recommendation tags={currentVideo.tags} />
+         {currentVideo.tags && <Recommendation tags={currentVideo.tags} />}
         </Container>
       )}
       {open && <VideoModal setOpen={setOpen} details={currentVideo} />}
