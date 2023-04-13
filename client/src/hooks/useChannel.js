@@ -80,7 +80,6 @@ export default function useChannel(setOpenUser) {
   const handleUpdate = async (details) => {
     const imgId = details.imgUrl;
     let newImgUrl;
-    console.log(!imgId);
 
     if (!isValid || pic) {
       newImgUrl = await handleProfile(pic);
