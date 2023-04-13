@@ -86,8 +86,8 @@ export default function useActions() {
         );
 
         setChannel(channelRes.data);
-        setDocTitle(videoRes.data.title);
-        document.title = docTitle;
+        //setDocTitle(videoRes.data.title);
+        //document.title = docTitle;
         dispatch(
           fetchSuccess({ ...videoRes.data, views: videoRes.data.views + 1 })
         );
