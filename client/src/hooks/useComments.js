@@ -31,7 +31,7 @@ export default function useComments(videoId, comment) {
       }
     };
     fetchComments();
-  }, [videoId, cookies.access_token]);
+  }, [videoId, cookies.access_token, comments]);
 
   useEffect(() => {
     const fetchChannel = async () => {
