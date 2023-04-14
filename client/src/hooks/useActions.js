@@ -102,6 +102,7 @@ export default function useActions() {
     useEffect(() => {
       docTitleRef.current = docTitle;
       document.title = docTitleRef.current;
+      console.log(document.title);
   }, []);
 
   return {
