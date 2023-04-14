@@ -96,7 +96,7 @@ export default function useActions() {
       }
     };
     fetchData();
-  }, [path, dispatch, docTitle]);
+  }, [path, dispatch]);
 
   return {
     currentUser,
