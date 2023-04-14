@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState, useRef } from 'react';
 import { useCookies } from "react-cookie";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
@@ -12,6 +12,8 @@ export default function useActions() {
   const dispatch = useDispatch();
   const path = useLocation().pathname.split("/")[2];
   const [docTitle, setDocTitle] = useState("TravelTube");
+  
+    const docTitleRef = useRef(docTitle);
 
   const { currentUser } = useSelector((state) => state.user);
   const { currentVideo } = useSelector((state) => state.video);
@@ -97,6 +99,10 @@ export default function useActions() {
     };
     fetchData();
   }, [path, dispatch]);
+  
+    useEffect(() => {
+    document.title = docTitleRef.current;
+  }, []);
 
   return {
     currentUser,
