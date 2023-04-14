@@ -89,7 +89,6 @@ export default function useActions() {
 
         setChannel(channelRes.data);
         setDocTitle(videoRes.data.title);
-        document.title = docTitle;
         dispatch(
           fetchSuccess({ ...videoRes.data, views: videoRes.data.views + 1 })
         );
@@ -101,7 +100,8 @@ export default function useActions() {
   }, [path, dispatch]);
   
     useEffect(() => {
-    document.title = docTitleRef.current;
+      docTitleRef.current = docTitle;
+      document.title = docTitleRef.current;
   }, []);
 
   return {
