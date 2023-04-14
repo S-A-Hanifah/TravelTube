@@ -100,11 +100,9 @@ export default function useActions() {
   }, [path, dispatch]);
   
     useEffect(() => {
-      console.log("useEffect called");
-      console.log("document.title before:", document.title);
-      docTitleRef.current = docTitle;
-      document.title = docTitleRef.current;
-      console.log("document.title after:", document.title);
+      console.log('useEffect executed');
+    docTitleRef.current = docTitle;
+    document.title = docTitleRef.current;
   }, []);
 
   return {
