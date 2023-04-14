@@ -103,7 +103,7 @@ export default function useActions() {
       console.log('useEffect executed');
     docTitleRef.current = docTitle;
     document.title = docTitleRef.current;
-  }, []);
+  }, [docTitle]);
 
   return {
     currentUser,
