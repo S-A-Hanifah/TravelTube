@@ -100,9 +100,8 @@ export default function useActions() {
   }, [path, dispatch]);
   
     useEffect(() => {
-      console.log('useEffect executed');
-    docTitleRef.current = docTitle;
-    document.title = docTitleRef.current;
+      docTitleRef.current = docTitle;
+      document.title = docTitleRef.current;
   }, [docTitle]);
 
   return {
